@@ -5,6 +5,8 @@ import Main2 from './components/Main2';
 
 function App() {
 
+  const url = process.env.PUBLIC_URL;
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -14,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={url}>
       <Routes>
         <Route path="/" element={<Main posts={posts} />} />
         <Route path="/main2/:id" element={<Main2 posts={posts} />} />
