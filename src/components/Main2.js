@@ -14,13 +14,13 @@ const Main2 = ({posts}) => {
 
     useEffect(() => {
         const changeNum = parseInt(params.id);
+
         setPage(changeNum);
     }, [params.id])
     const handlePageChange = (page) => {
         setPage(page);
         navigation(`/main2/${page}`);
     };
-    console.log('TEST', params);
 
     // activePage: 현재 페이지
     // itemsCountPerPage: 한 페이지당 보여줄 리스트 아이템의 개수
