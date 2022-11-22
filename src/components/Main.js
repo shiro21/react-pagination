@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
 
 
@@ -19,6 +20,7 @@ const Main = ({posts}) => {
                     <option value="50">50</option>
                     <option value="100">100</option>
                 </select>
+                <Link to="/main2/1">이동</Link>
             </div>
             {
                 posts.slice(offset, offset + limit).map((item) => (
